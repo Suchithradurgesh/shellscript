@@ -1,0 +1,56 @@
+EXAMPLES  ON CONDITIONALS:
+------------------------------------------
+IF-ELSE EXAMPLE:
+-----------------------
+#!/bin/bash
+echo "enter username"
+read username
+echo "enter password"
+if [[ ( $username == "admin" && $password == "secret" ) ]]; then
+        echo "valid user"
+else
+        echo "invalid user"
+fi
+OUTPUT:
+------------
+enter username
+LENOVO
+enter password
+invalid user
+
+ELSEIF EXAMPLE:
+-----------------------
+#!/bin/bash
+echo "enter your lucky number"
+read n
+if [ $n -eq 101 ];
+then
+        echo "you got 1st prize"
+elif [ $n -eq 510 ];
+then
+        echo "you got 2nd prize"
+elif [ $n -eq 999 ];
+then
+        echo "you got 3rd prize"
+else
+        echo "sorry,try for the next time"
+fi
+OUTPUT:
+------------
+enter your lucky number
+999
+you got 3rd prize
+
+SIMPLE-IF:
+--------------
+#!/bin/bash
+a=10
+b=20
+if [ $a == $b ]
+then
+    echo "a is equal to b"
+fI
+OUTPUT:
+------------
+a is not equal to b
+
