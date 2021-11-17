@@ -1,0 +1,13 @@
+STRING CONCATENATION:
+-----------------------------------
+#!/bin/bash
+string1="string"
+string2="concatenation"
+echo "$string1$string2"
+string3=$string1$string2
+string3+=" is a combining of the strings"
+echo $string3
+OUTPUT:
+------------
+stringconcatenation
+stringconcatenation is a combining of the strings
