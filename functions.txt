@@ -1,0 +1,42 @@
+FUNCTIONS EXAMPLES:
+-------------------------------
+CREATION OF FUNCTION:
+---------------------------------
+#!/bin/bash
+function F1()
+{
+        echo 'i like music'
+}
+F1
+OUTPUT:
+------------
+i like music
+
+CREATE FUNCTION   WITH PARAMETERS:
+----------------------------------------------------
+#!/bin/bash
+Rectangle_Area() {
+        area=$(($1 * $2))
+        echo "area is : $area"
+}
+Rectangle_Area 10 20
+OUTPUT:
+------------
+area is : 200
+
+PASS RETURN VALUE FROM FUNCTION:
+---------------------------------------------------
+#!/bin/bash
+function greeting() {
+        str="hello, $name"
+        echo $str
+}
+echo "enter your name"
+read name
+val=$(greeting)
+echo "return value of the function is $val"
+OUTPUT:
+-----------
+enter your name
+suchithra
+return value of the function is hello, suchithra
