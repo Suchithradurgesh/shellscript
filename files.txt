@@ -1,0 +1,43 @@
+FILES:
+-------
+READ A FILE:
+-----------------
+#!/bin/bash
+file='viri.txt'
+while read line; do
+        echo $line
+done < $file
+OUTPUT:
+-----------
+hii viritha how are you
+DELETING THE FILE:
+--------------------------
+#!/bin/bash
+echo "enter filename to remove"
+read fn
+rm -i $fn
+OUTPUT:
+------------
+enter filename to remove
+viri.txt
+rm: remove regular file 'viri.txt'? y
+
+APPEND TO FILE:
+-----------------------
+#!/bin/bash
+echo "before appending the file"
+cat viri.txt
+echo "where are you now">> viri.txt
+echo "after appending the file"
+cat viri.txt
+OUTPUT:
+------------
+before appending the file
+hii viritha
+how are you doing
+after appending the file
+hii viritha
+how are you doing
+where are you now
+
+
